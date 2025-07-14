@@ -51,9 +51,6 @@ async def handle_user_message(
     return str(response)
 
 
-from llama_index.tools.mcp import BasicMCPClient, McpToolSpec
-
-
 async def main():
     mcp_client = BasicMCPClient("http://127.0.0.1:8000/sse")
     mcp_tool = McpToolSpec(client=mcp_client)
